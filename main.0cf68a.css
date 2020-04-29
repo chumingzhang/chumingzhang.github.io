@@ -318,9 +318,9 @@ body {
 	font-size: 14px;
 	font-family: Helvetica Neue,Helvetica,STHeiTi,Arial,sans-serif;
 	line-height: 1.5;
-    color: #fff;
+    color: #333;
     min-height: 100%;
-	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 25, 0.5));, 
+	background: linear-gradient(rgba(40, 40, 40, 0.5), rgba(40, 40, 40, 0.5)), 
     url('https://imagine.gsfc.nasa.gov/hst_bday/images/may-12-2019-star-forming-region-n11b.jpg') no-repeat 0% 0%/ cover
 }
 
@@ -347,7 +347,7 @@ progress {
 a {
 	background: 0 0;
 	text-decoration: none;
-	color: #08c
+	color: YELLOW;
 }
 
 a:active {
@@ -496,19 +496,19 @@ input::-ms-clear,input::-ms-reveal {
 }
 
 input::-moz-placeholder,textarea::-moz-placeholder {
-	color: #fff
+	color: #999
 }
 
 input:-ms-input-placeholder,textarea:-ms-input-placeholder {
-	color: #fff
+	color: #999
 }
 
 input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
-	color: #fff
+	color: #999
 }
 
 .placeholder {
-	color: #fff
+	color: #999
 }
 
 table {
@@ -755,11 +755,11 @@ body,button,input,select,textarea {
 	font-family: lucida grande,lucida sans unicode,lucida,helvetica,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
-	line-height: 1.75
+	line-height: 1.75;
 }
 
 body {
-	overflow-y: hidden
+	overflow-y: hidden;
 }
 
 #container,body,html {
@@ -808,7 +808,7 @@ body {
 }
 
 .left-col {
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 25, 0.5));
+	background: linear-gradient(rgba(40, 40, 40, 0.5), rgba(40, 40, 40, 0.5));
 	width: 300px;
 	position: fixed;
 	opacity: 1;
@@ -901,7 +901,7 @@ body {
 	margin: 0 auto;
 	position: relative;
 	overflow: hidden;
-	background: rgba(255, 255, 255, 0.5);
+	background: rgba(0, 0, 0, 0);
 	-webkit-transition: all .2s ease-in;
 	display: -webkit-box;
 	-webkit-box-orient: horizontal;
@@ -1005,8 +1005,9 @@ body {
 	line-height: 22.400000000000002px
 }
 
+<!-- 代码标号 -->
 .article-entry .gist .gist-file .gist-data .line-numbers,.article-entry .highlight .gutter pre,.article-entry .highlight .gutter pre .line {
-	color: #666
+	color: #fff
 }
 
 .article-entry code,.article-entry pre {
@@ -1084,7 +1085,7 @@ body {
 	border-style: solid;
 	border-color: #ddd;
 	border-width: 1px 0;
-	background: #272822;
+	background: #fff;
 	padding: 15px 20px 15px 0
 }
 
@@ -2023,10 +2024,7 @@ pre .css~* .id,pre .id {
 
 .article {
 	margin: 30px;
-	border: 1px solid #ddd;
-	border-top: 1px solid #fff;
-	border-bottom: 1px solid #fff;
-	background: rgba(255,255,255,.5);
+	background: rgba(40,40,40,0.8);
 	transition: all .2s ease-in
 }
 
@@ -2035,13 +2033,13 @@ pre .css~* .id,pre .id {
 }
 
 .article-inner h1.article-title,.article-title {
-	color: #696969;
+	color: #0088CC;
 	margin-left: 0;
 	font-weight: 300;
 	line-height: 35px;
 	margin-bottom: 20px;
 	font-size: 26px;
-	transition: color .3s
+	transition: color .3s;
 }
 
 .article-header {
@@ -2256,7 +2254,7 @@ pre .css~* .id,pre .id {
 .article-entry h2,.article-entry h3,.article-entry h4,.article-entry h5,.article-entry h6 {
 	margin-top: 20px;
 	font-weight: 700;
-	color: #574c4c;
+	color: #fff;
 	padding-bottom: 5px;
 	border-bottom: 1px solid #ddd
 }
