@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>B站自学课程 | Zcm的博客</title>
+  <title>java读取json文件全流程（包含下载包和导入包） | Zcm的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="B站自学课程（不定时更新）">
+  <meta name="description" content="本文教程使用fastjson处理json文件，其他的包可以自行百度">
 <meta property="og:type" content="article">
-<meta property="og:title" content="B站自学课程">
-<meta property="og:url" content="http://yoursite.com/2020/04/28/B%E7%AB%99%E8%87%AA%E5%AD%A6%E8%AF%BE%E7%A8%8B/index.html">
+<meta property="og:title" content="java读取json文件全流程（包含下载包和导入包）">
+<meta property="og:url" content="http://yoursite.com/2020/04/29/java%E8%AF%BB%E5%8F%96json%E6%96%87%E4%BB%B6%E5%85%A8%E6%B5%81%E7%A8%8B%EF%BC%88%E5%8C%85%E5%90%AB%E4%B8%8B%E8%BD%BD%E5%8C%85%E5%92%8C%E5%AF%BC%E5%85%A5%E5%8C%85%EF%BC%89/index.html">
 <meta property="og:site_name" content="Zcm的博客">
-<meta property="og:description" content="B站自学课程（不定时更新）">
+<meta property="og:description" content="本文教程使用fastjson处理json文件，其他的包可以自行百度">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-28T13:04:53.000Z">
-<meta property="article:modified_time" content="2020-04-29T12:47:02.888Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200330220844541.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200330221018292.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-04-29T13:39:59.945Z">
+<meta property="article:modified_time" content="2020-04-29T13:40:25.909Z">
 <meta property="article:author" content="Zcm">
-<meta property="article:tag" content="B站自学">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200330220844541.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="Zcm的博客" type="application/atom+xml">
   
@@ -156,14 +158,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-B站自学课程" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-java读取json文件全流程（包含下载包和导入包）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      B站自学课程
+      java读取json文件全流程（包含下载包和导入包）
     </h1>
   
 
@@ -177,8 +179,8 @@
 
 <!-- 添加不蒜子统计次数end -->
 
-<a href="/2020/04/28/B%E7%AB%99%E8%87%AA%E5%AD%A6%E8%AF%BE%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2020-04-28T13:04:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-28</time>
+<a href="/2020/04/29/java%E8%AF%BB%E5%8F%96json%E6%96%87%E4%BB%B6%E5%85%A8%E6%B5%81%E7%A8%8B%EF%BC%88%E5%8C%85%E5%90%AB%E4%B8%8B%E8%BD%BD%E5%8C%85%E5%92%8C%E5%AF%BC%E5%85%A5%E5%8C%85%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2020-04-29T13:39:59.945Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
 </a>
         <!-- 需要添加的位置 -->
         <!-- 开始添加字数统计-->
@@ -188,7 +190,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">328字</span>
+        <span class="post-count">517字</span>
       </span>
     </span>
 
@@ -197,7 +199,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">2分</span>
       </span>
     </span>
 </div>
@@ -209,32 +211,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>B站自学课程（不定时更新）</strong></p>
+        <p><strong>本文教程使用fastjson处理json文件，其他的包可以自行百度</strong></p>
 <a id="more"></a>
 
-<p><strong>兴趣</strong></p>
-<ol>
-<li><a href="https://www.bilibili.com/video/av13637186/?spm_id_from=333.788.videocard.1" target="_blank" rel="noopener">Latex</a><br>Latex是写论文神器，这个教程是分开放的，这个链接是第一集，在”相关推荐”里能找到后面的所有教程</li>
-<li><a href="https://www.bilibili.com/video/av58012612" target="_blank" rel="noopener">微信小程序</a><br>有实战项目，这个UP主还有其他几个微信小程序相关教程，能学到不少东西，看完后能自己写出使用了百度翻译API的翻译小程序。自学项目源码-<a href="https://github.com/chumingzhang/WeChatLittleApp" target="_blank" rel="noopener">我的小程序</a></li>
-<li><a href="https://www.bilibili.com/video/av4050443?from=search&seid=9271248035755220089" target="_blank" rel="noopener">python入门</a><br>小甲鱼Python入门教程，有对应习题（可以在百度搜到）</li>
-<li><a href="https://www.bilibili.com/video/av67722483" target="_blank" rel="noopener">python小游戏</a><br>这个UP主有贪吃蛇、太空侵略者等多款小游戏，且教程清晰，能在1h左右轻松完成。这种小游戏开发比较简单，主要是学习思维。经过几个小游戏的实战后我用JAVA写了一个小游戏的合集，项目源码在此-<a href="https://github.com/chumingzhang/java" target="_blank" rel="noopener">JAVA小游戏合集</a></li>
-<li><a href="https://www.bilibili.com/video/BV16Z4y1j7WJ" target="_blank" rel="noopener">VSCode玩转python入门</a></li>
-<li><a href="https://www.bilibili.com/video/av33930433?from=search&seid=13483422391894422481" target="_blank" rel="noopener">背包九讲（动规入门）</a></li>
-<li><a href="https://www.bilibili.com/video/av16544031?from=search&seid=4727611512414134774" target="_blank" rel="noopener">动规整体思路</a></li>
-<li><a href="https://www.bilibili.com/video/BV1U4411J7nT?from=search&seid=58908427302367084" target="_blank" rel="noopener">人脸检测（非识别）</a></li>
-<li><a href="https://www.bilibili.com/video/BV1sb411P7pQ?from=search&seid=1360574611689236808" target="_blank" rel="noopener">卷积神经网络</a></li>
-<li><a href="https://www.bilibili.com/video/BV1gx41127d7?from=search&seid=17971608803024353010" target="_blank" rel="noopener">快速幂</a></li>
-<li><a href="https://www.bilibili.com/video/BV1hE411N7BK?from=search&seid=17579625265588797957" target="_blank" rel="noopener">makefile01</a>  <a href="https://www.bilibili.com/video/BV1Mx411m7fm?from=search&seid=17579625265588797957" target="_blank" rel="noopener">makefile02</a>看完01可直接看02最后面，多介绍了如何一次生成多个可执行文件</li>
-<li><a href="https://www.bilibili.com/video/BV1Vs411876L?p=1" target="_blank" rel="noopener">git教程</a></li>
-<li><a href="https://www.bilibili.com/video/BV1Yb411a7ty?from=search&seid=16596763108369977084" target="_blank" rel="noopener">hexo搭建博客</a></li>
-</ol>
-<p><strong>课程</strong></p>
-<ol>
-<li><a href="https://www.bilibili.com/video/av7134874?from=search&seid=14651207299343502500" target="_blank" rel="noopener">算法设计与分析</a></li>
-<li><a href="https://www.bilibili.com/video/av52007695" target="_blank" rel="noopener">数据库</a></li>
-<li><a href="https://www.bilibili.com/video/av6538245?from=search&seid=752130382613695940" target="_blank" rel="noopener">操作系统</a></li>
-<li><a href="https://www.bilibili.com/video/av49719954?from=search&seid=10416262542134685811" target="_blank" rel="noopener">AT&amp;T汇编语言</a></li>
-</ol>
+<p> <strong>1.</strong> <a href="https://mvnrepository.com/artifact/com.alibaba/fastjson/1.2.59?__cf_chl_captcha_tk__=067c20ccc98c95bc9a3111b6037617a598b8d6e7-1585577188-0-Aeg3WmqPwrVaqpLvHzHp0Bfu0huQlPw0x7Ix0mVSiqDayvOB4pJLTAj6FX0fVGGhTDjAhqY_RU0F7zhEjQc6MBLFcZM-cmyrq-vbn6ESzKBxNreTwVgsIEjy-4o0pFIBVNx30xE7dYLLrBIJumvi5B2_m2KNNmIj_J8kEYhRJVaGdyx4OZXKmMCaQO6qu9yL2Sehz8PKXIbKUE7o3Nkcc8D5rmzkhjEX5u5nUGuzVfNqPBaVUCUZKgB2hFDAEBHMdYzQyrCBvX_u3iPj_j-pyMeS1e3dJ23aJHnPpF5RIjRroxL-4zSXeUzscWsfqpVCeir2x54sbM77xiIAj6Ljz1Tg3QdRVBeVmnJHE_289W8u7YDh7i8rrl1sDpRQOhZSxaFFFy81m1PSZ7N_e1M5B5O8_OrePYmLNF6bA43oVmyU" target="_blank" rel="noopener"><strong>下载fastjson包</strong></a><br>（其他的包也在该网站搜索下载）<br><img src="https://img-blog.csdnimg.cn/20200330220844541.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br> <strong>2.</strong> <a href="https://jingyan.baidu.com/article/ca41422fc76c4a1eae99ed9f.html" target="_blank" rel="noopener"><strong>eclipse导入包</strong></a><br>注意要导入到Classpath，否则会出现java.lang.NoClassDefFoundError错误<img src="https://img-blog.csdnimg.cn/20200330221018292.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br> <strong>3. json文件读取为string</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">JsonToString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="comment">// 读取JSON数据到 jsonStr</span></span><br><span class="line">    String jsonStr;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">         File file = <span class="keyword">new</span> File(JsonPath);<span class="comment">//Json文件对应路径</span></span><br><span class="line">         FileReader fileReader = <span class="keyword">new</span> FileReader(file);</span><br><span class="line">         Reader reader = <span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(file), <span class="string">"Utf-8"</span>);</span><br><span class="line">         <span class="keyword">int</span> ch = <span class="number">0</span>;</span><br><span class="line">         StringBuffer sbBuffer = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">         <span class="keyword">while</span>((ch = reader.read()) != -<span class="number">1</span>) &#123;</span><br><span class="line">             sbBuffer.append((<span class="keyword">char</span>) ch);</span><br><span class="line">         &#125;</span><br><span class="line">         fileReader.close();</span><br><span class="line">         reader.close();</span><br><span class="line">         jsonStr = sbBuffer.toString();</span><br><span class="line">         <span class="keyword">return</span> jsonStr;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">         e.printStackTrace();</span><br><span class="line">         <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p> <strong>4. 数据处理</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSON;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSONArray;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSONObject;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">   <span class="comment">//json字符串-简单对象型</span></span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String  JSON_OBJ_STR = <span class="string">"&#123;\"studentName\":\"lily\",\"studentAge\":12&#125;"</span>;</span><br><span class="line">   <span class="comment">//json字符串-数组类型</span></span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String  JSON_ARRAY_STR = <span class="string">"[&#123;\"studentName\":\"lily\",\"studentAge\":12&#125;,&#123;\"studentName\":\"lucy\",\"studentAge\":15&#125;]"</span>;</span><br><span class="line">   <span class="comment">//复杂格式json字符串</span></span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String  COMPLEX_JSON_STR = <span class="string">"&#123;\"teacherName\":\"crystall\",\"teacherAge\":27,\"course\":&#123;\"courseName\":\"english\",\"code\":1270&#125;,\"students\":[&#123;\"studentName\":\"lily\",\"studentAge\":12&#125;,&#123;\"studentName\":\"lucy\",\"studentAge\":15&#125;]&#125;"</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        testJSONStrToJSONObject();</span><br><span class="line">        System.out.println();</span><br><span class="line">        testJSONStrToJSONArray();</span><br><span class="line">        System.out.println();</span><br><span class="line">        testComplexJSONStrToJSONObject();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment">//json字符串-简单对象型与JSONObject之间的转换</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">testJSONStrToJSONObject</span><span class="params">()</span></span>&#123;</span><br><span class="line">        JSONObject jsonObject = JSON.parseObject(JSON_OBJ_STR);</span><br><span class="line">        System.out.println(jsonObject.getString(<span class="string">"studentName"</span>)+<span class="string">":"</span>+jsonObject.getInteger(<span class="string">"studentAge"</span>));</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment">//json字符串-数组类型与JSONArray之间的转换</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">testJSONStrToJSONArray</span><span class="params">()</span></span>&#123;</span><br><span class="line">        JSONArray jsonArray = JSON.parseArray(JSON_ARRAY_STR);</span><br><span class="line">        <span class="comment">//JSONArray jsonArray1 = JSONArray.parseArray(JSON_ARRAY_STR);//因为JSONArray继承了JSON，所以这样也是可以的</span></span><br><span class="line">        <span class="comment">//遍历方式1</span></span><br><span class="line">        <span class="keyword">int</span> size = jsonArray.size();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++)&#123;</span><br><span class="line">            JSONObject jsonObject = jsonArray.getJSONObject(i);</span><br><span class="line">            System.out.println(jsonObject.getString(<span class="string">"studentName"</span>)+<span class="string">":"</span>+jsonObject.getInteger(<span class="string">"studentAge"</span>));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//遍历方式2</span></span><br><span class="line">        <span class="keyword">for</span> (Object obj : jsonArray) &#123;</span><br><span class="line">            JSONObject jsonObject = (JSONObject) obj;</span><br><span class="line">            System.out.println(jsonObject.getString(<span class="string">"studentName"</span>)+<span class="string">":"</span>+jsonObject.getInteger(<span class="string">"studentAge"</span>));</span><br><span class="line">        &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment">//复杂json格式字符串与JSONObject之间的转换</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">testComplexJSONStrToJSONObject</span><span class="params">()</span></span>&#123;</span><br><span class="line">        JSONObject jsonObject = JSON.parseObject(COMPLEX_JSON_STR);</span><br><span class="line">        <span class="comment">//JSONObject jsonObject1 = JSONObject.parseObject(COMPLEX_JSON_STR);//因为JSONObject继承了JSON，所以这样也是可以的</span></span><br><span class="line">        String teacherName = jsonObject.getString(<span class="string">"teacherName"</span>);</span><br><span class="line">        Integer teacherAge = jsonObject.getInteger(<span class="string">"teacherAge"</span>);</span><br><span class="line">        JSONObject course = jsonObject.getJSONObject(<span class="string">"course"</span>);</span><br><span class="line">        JSONArray students = jsonObject.getJSONArray(<span class="string">"students"</span>);</span><br><span class="line">        System.out.println(teacherName + <span class="string">" "</span> + teacherAge);</span><br><span class="line">        System.out.println(course.getString(<span class="string">"courseName"</span>) + <span class="string">" : "</span> + course.getInteger(<span class="string">"code"</span>));</span><br><span class="line">        <span class="keyword">int</span> size = students.size();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++)&#123;</span><br><span class="line">            JSONObject temp = students.getJSONObject(i);</span><br><span class="line">            System.out.println(temp.getString(<span class="string">"studentName"</span>)+<span class="string">":"</span>+temp.getInteger(<span class="string">"studentAge"</span>));</span><br><span class="line">        &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
 
       
 
@@ -265,17 +251,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">B站自学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -326,7 +301,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/28/B%E7%AB%99%E8%87%AA%E5%AD%A6%E8%AF%BE%E7%A8%8B/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/29/java%E8%AF%BB%E5%8F%96json%E6%96%87%E4%BB%B6%E5%85%A8%E6%B5%81%E7%A8%8B%EF%BC%88%E5%8C%85%E5%90%AB%E4%B8%8B%E8%BD%BD%E5%8C%85%E5%92%8C%E5%AF%BC%E5%85%A5%E5%8C%85%EF%BC%89/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -340,18 +315,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/04/29/%E6%90%AD%E5%BB%BAhexo-yilia%E4%B8%BB%E9%A2%98%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/04/29/virtualBox%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%9E%E7%8E%B0ubuntu%E5%8F%8C%E5%90%91%E5%A4%8D%E5%88%B6/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          搭建hexo个人博客(二)
+          virtualBox虚拟机实现ubuntu双向复制
         
       </div>
     </a>
   
   
-    <a href="/2020/04/28/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2020/04/29/Java%E3%80%81Python%E5%AE%9E%E7%8E%B0csv%E5%92%8C%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B9%8B%E9%97%B4%E7%9A%84%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java、Python实现csv和二维数组之间的相互转换</div>
       <i class="icon-circle-right"></i>
     </a>
   

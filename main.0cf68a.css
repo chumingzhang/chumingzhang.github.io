@@ -320,8 +320,7 @@ body {
 	line-height: 1.5;
     color: #333;
     min-height: 100%;
-	background: linear-gradient(rgba(40, 40, 40, 0.5), rgba(40, 40, 40, 0.5)), 
-    url('https://imagine.gsfc.nasa.gov/hst_bday/images/may-12-2019-star-forming-region-n11b.jpg') no-repeat 0% 0%/ cover
+	background: linear-gradient(rgba(63, 63, 63, 1), rgba(63, 63, 63, 1));
 }
 
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary {
@@ -347,7 +346,7 @@ progress {
 a {
 	background: 0 0;
 	text-decoration: none;
-	color: YELLOW;
+	color: #03B9F6;
 }
 
 a:active {
@@ -751,7 +750,7 @@ i {
 }
 
 body,button,input,select,textarea {
-	color: #fff;
+	color: #858585;
 	font-family: lucida grande,lucida sans unicode,lucida,helvetica,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
@@ -808,7 +807,8 @@ body {
 }
 
 .left-col {
-	background: linear-gradient(rgba(40, 40, 40, 0.5), rgba(40, 40, 40, 0.5));
+	background: linear-gradient(rgba(63, 63, 63, 0.5), rgba(63, 63, 63, 0.5)),
+    url('https://imagine.gsfc.nasa.gov/hst_bday/images/may-12-2019-star-forming-region-n11b.jpg')no-repeat 0% 20%/ cover;
 	width: 300px;
 	position: fixed;
 	opacity: 1;
@@ -1005,7 +1005,7 @@ body {
 	line-height: 22.400000000000002px
 }
 
-<!-- 代码标号 -->
+<!-- ä»£ç æ ‡å· -->
 .article-entry .gist .gist-file .gist-data .line-numbers,.article-entry .highlight .gutter pre,.article-entry .highlight .gutter pre .line {
 	color: #fff
 }
@@ -1422,7 +1422,7 @@ pre .css~* .id,pre .id {
 }
 
 #header .header-nav .social a.github {
-	background: #afb6ca;
+	background: #000000;
 	border: 1px solid #afb6ca
 }
 
@@ -1592,11 +1592,12 @@ pre .css~* .id,pre .id {
 }
 
 .archives-wrap {
+	background: #3f3f3f;
+	border-radius: 10px;
+	box-shadow: 5px 5px 20px #000000;
 	position: relative;
 	margin: 0 30px;
 	padding-right: 60px;
-	border-bottom: 1px solid #eee;
-	background: #fff
 }
 
 .archives-wrap:first-child {
@@ -1623,7 +1624,7 @@ pre .css~* .id,pre .id {
 }
 
 .archives {
-	position: relative
+	position: relative;
 }
 
 .archives .article-info {
@@ -1633,8 +1634,8 @@ pre .css~* .id,pre .id {
 .archives .archive-article {
 	margin-left: 200px;
 	padding: 20px 0;
-	border-bottom: 1px solid #eee;
-	border-top: 1px solid #fff;
+	border-bottom: 1px solid #666;
+	border-top: 1px solid #666;
 	position: relative
 }
 
@@ -1648,8 +1649,8 @@ pre .css~* .id,pre .id {
 
 .archives .archive-article-title {
 	font-size: 16px;
-	color: #333;
-	transition: color .3s
+	/* color: #333; */
+	transition: color .3s;
 }
 
 .archives .archive-article-title:hover {
@@ -2024,8 +2025,9 @@ pre .css~* .id,pre .id {
 
 .article {
 	margin: 30px;
-	background: rgba(40,40,40,0.8);
-	transition: all .2s ease-in
+	background: rgba(63,63,63,1);
+	transition: all .2s ease-in;
+	border-radius: 10px
 }
 
 .article img {
@@ -2033,7 +2035,7 @@ pre .css~* .id,pre .id {
 }
 
 .article-inner h1.article-title,.article-title {
-	color: #0088CC;
+	color: #03B9F6;
 	margin-left: 0;
 	font-weight: 300;
 	line-height: 35px;
@@ -2043,7 +2045,6 @@ pre .css~* .id,pre .id {
 }
 
 .article-header {
-	border-left: 5px solid #4d4d4d;
 	padding: 30px 0 15px 25px;
 	padding-left: 7.6923%
 }
@@ -2075,7 +2076,7 @@ pre .css~* .id,pre .id {
 }
 
 .article-more-link a {
-	background: #4d4d4d;
+	background: #03B9F6;
 	color: #fff;
 	font-size: 12px;
 	padding: 5px 8px;
@@ -2115,6 +2116,7 @@ pre .css~* .id,pre .id {
 }
 
 .article-inner {
+	box-shadow: 5px 5px 20px #000000;
 	border-color: #d1d1d1
 }
 
@@ -2254,9 +2256,9 @@ pre .css~* .id,pre .id {
 .article-entry h2,.article-entry h3,.article-entry h4,.article-entry h5,.article-entry h6 {
 	margin-top: 20px;
 	font-weight: 700;
-	color: #fff;
+	color: #858585;
 	padding-bottom: 5px;
-	border-bottom: 1px solid #ddd
+	border-bottom: 1px solid #dddddd
 }
 
 .article-entry video {

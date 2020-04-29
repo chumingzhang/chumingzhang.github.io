@@ -6,23 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>搭建hexo个人博客(二) | Zcm的博客</title>
+  <title>算法时间复杂度符号分析（O、o、Ω、ω、Θ） | Zcm的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="设置hexo背景效果如下图：">
+  <meta name="description" content="Θ – 等于f(n) &#x3D; Θ(g(n))   即   f(n) &#x3D; g(n)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搭建hexo个人博客(二)">
-<meta property="og:url" content="http://yoursite.com/2020/04/29/%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)/index.html">
+<meta property="og:title" content="算法时间复杂度符号分析（O、o、Ω、ω、Θ）">
+<meta property="og:url" content="http://yoursite.com/2020/04/29/%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E7%AC%A6%E5%8F%B7%E5%88%86%E6%9E%90%EF%BC%88O%E3%80%81o%E3%80%81%CE%A9%E3%80%81%CF%89%E3%80%81%CE%98%EF%BC%89/index.html">
 <meta property="og:site_name" content="Zcm的博客">
-<meta property="og:description" content="设置hexo背景效果如下图：">
+<meta property="og:description" content="Θ – 等于f(n) &#x3D; Θ(g(n))   即   f(n) &#x3D; g(n)">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200429112500743.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200429110000660.png">
-<meta property="article:published_time" content="2020-04-29T02:12:53.000Z">
-<meta property="article:modified_time" content="2020-04-29T03:28:01.067Z">
+<meta property="article:published_time" content="2020-04-29T13:37:34.981Z">
+<meta property="article:modified_time" content="2020-04-29T13:42:26.522Z">
 <meta property="article:author" content="Zcm">
-<meta property="article:tag" content="Hexo个人博客">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200429112500743.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="Zcm的博客" type="application/atom+xml">
   
@@ -47,7 +43,7 @@
   
     <!--动态线条背景begin-->
 	<script type="text/javascript"
-	color="40,40,40" opacity='0.7' zIndex="-1" count="317" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	color="255,255,255" opacity='0.5' zIndex="-1" count="317" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
 	</script>
 	
 	<!--动态线条背景endcolor：表示线条颜色，三个数字分别为(R,G,B)，默认：（0,0,0）-->
@@ -159,14 +155,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-搭建hexo个人博客(二)" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-算法时间复杂度符号分析（O、o、Ω、ω、Θ）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      搭建hexo个人博客(二)
+      算法时间复杂度符号分析（O、o、Ω、ω、Θ）
     </h1>
   
 
@@ -180,37 +176,46 @@
 
 <!-- 添加不蒜子统计次数end -->
 
-<a href="/2020/04/29/%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)/" class="archive-article-date">
-  	<time datetime="2020-04-29T02:12:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
+<a href="/2020/04/29/%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E7%AC%A6%E5%8F%B7%E5%88%86%E6%9E%90%EF%BC%88O%E3%80%81o%E3%80%81%CE%A9%E3%80%81%CF%89%E3%80%81%CE%98%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2020-04-29T13:37:34.981Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
 </a>
+        <!-- 需要添加的位置 -->
+        <!-- 开始添加字数统计-->
         
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">113字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1分</span>
+      </span>
+    </span>
+</div>
+
+          
+        <!-- 添加完成 -->	
+		
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="设置hexo背景"><a href="#设置hexo背景" class="headerlink" title="设置hexo背景"></a>设置hexo背景</h2><p><strong>效果如下图：</strong><br><img src="https://img-blog.csdnimg.cn/20200429112500743.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+        <p>Θ – 等于<br>f(n) = Θ(g(n))   即   f(n) = g(n)</p>
 <a id="more"></a>
 
-<p><strong>0：将压缩的css格式化</strong><br>下载好的主题<code>yilia\source\main.0cf68a.css</code>文件是经过压缩的，（不是给人看的，乍一看还以为是乱码），为了下面步骤修改方便，先在<a href="https://tool.lu/" target="_blank" rel="noopener">这个网站</a>的css工具中把代码拷贝进去美化一下</p>
-<p><strong>1：去除头像上半部分的背景</strong><br>在文件<code>yilia/layout/_partial/left-col.ejs</code>中，注释第2行并添加<code>&lt;div class=&quot;overlay&quot; &gt;&lt;/div&gt;</code>，修改后如下图：<br><img src="https://img-blog.csdnimg.cn/20200429110000660.png" alt="在这里插入图片描述"><br><strong>2：更换左侧背景图片</strong><br>在文件<code>yilia\source\main.0cf68a.css</code>中(搜索<code>.left-col</code>，在811-820行左右)，修改成如下代码（修改了background）：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.left-col</span> &#123;</span><br><span class="line">	<span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(rgba(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.5</span>), <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.5</span>)),</span><br><span class="line">    <span class="built_in">url</span>(<span class="string">'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1588096761872&amp;di=78faeda41ce4531f2929e20ed90669c3&amp;imgtype=0&amp;src=http://b-ssl.duitang.com/uploads/item/201612/09/20161209000936_zaXwh.jpeg'</span>)<span class="built_in">no-repeat</span> <span class="number">0%</span> <span class="number">20%</span>/ cover;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">	<span class="attribute">position</span>: fixed;</span><br><span class="line">	<span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">	<span class="attribute">transition</span>: all .<span class="number">2s</span> ease-in;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">z-index</span>: <span class="number">999</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>3：改变左侧字体颜色</strong><br>在文件<code>yilia\source\main.0cf68a.css</code>中(搜索<code>.left-col</code>，在849-859行左右)，修改成如下代码（修改了color）：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.left-col</span> <span class="selector-id">#header</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#000000</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.left-col</span> <span class="selector-id">#header</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#b0a0aa</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.left-col</span> <span class="selector-id">#header</span> <span class="selector-class">.header-subtitle</span> &#123;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#000000</span>;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">25px</span>;</span><br><span class="line">	<span class="attribute">overflow</span>: hidden;</span><br><span class="line">	<span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">	<span class="attribute">display</span>: -webkit-box;</span><br><span class="line">	<span class="attribute">-webkit-line-clamp</span>: <span class="number">2</span>;</span><br><span class="line">	<span class="attribute">-webkit-box-orient</span>: vertical</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>4：将右侧背景变透明</strong><br>在文件<code>yilia\source\main.0cf68a.css</code>中(搜索<code>.article</code>，在2026-2033行左右)，修改成如下代码（去掉了position，修改了background）：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.article</span> &#123;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">30px</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ddd</span>;</span><br><span class="line">	<span class="attribute">border-top</span>: <span class="number">1px</span> solid <span class="number">#fff</span>;</span><br><span class="line">	<span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#fff</span>;</span><br><span class="line">	<span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,.<span class="number">5</span>);</span><br><span class="line">	<span class="attribute">transition</span>: all .<span class="number">2s</span> ease-in</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>5：取消右侧栏背景颜色</strong><br>在文件<code>yilia\source\main.0cf68a.css</code>中(搜索<code>.mid-col</code>，在794-800行左右)，修改成如下代码（去掉了background）：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.mid-col</span> &#123;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">min-height</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">300px</span>;</span><br><span class="line">	<span class="attribute">width</span>: auto</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>6：添加背景图片</strong><br>在文件<code>yilia\source\main.0cf68a.css</code>中(搜索<code>body</code>，在316-326行左右)，修改成如下代码（修改了background）：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">	<span class="attribute">font-family</span>: Helvetica Neue,Helvetica,STHeiTi,Arial,sans-serif;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">1.5</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#333</span>;</span><br><span class="line">    <span class="attribute">min-height</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(rgba(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.5</span>), <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.5</span>)), </span><br><span class="line">    <span class="built_in">url</span>(<span class="string">'https://c-ssl.duitang.com/uploads/item/201709/16/20170916133542_8vinr.jpeg'</span>) no-repeat <span class="number">0%</span> <span class="number">0%</span>/ cover</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>7：去除背景覆盖！！（重点！参考的博客漏了这一步卡了我好久）</strong><br>在文件<code>yilia\source\main.0cf68a.css</code>中(搜索<code>body</code>，在761-763行左右)，修改成如下代码（去掉了background）：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">	<span class="attribute">overflow-y</span>: hidden</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>(<a href="https://blog.csdn.net/weixin_41287260/article/details/103050813?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3" target="_blank" rel="noopener">参考博客</a>）</p>
+<p>Ο – 小于等于（常用于计算最坏情况，作为时间复杂度上界）<br>f(n) = Ο(g(n))  即  f(n) ≤ g(n)</p>
+<p>ο – 小于<br>f(n) = ο(g(n))  即  f(n) ＜ g(n)</p>
+<p>Ω – 大于等于<br>f(n) = Ω(g(n))  即  f(n) ≥ g(n)</p>
+<p>ω – 大于<br>f(n) = ω(g(n))  即  f(n) ＞ g(n)</p>
+<p><a href="https://www.bilibili.com/video/BV1Ls411W7PB?p=9" target="_blank" rel="noopener">B站北大屈婉玲教授有一节课详细讲过这个，最后的例题很棒</a></p>
 
       
 
@@ -237,20 +242,10 @@
         </div>
       
     </div>
+	
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Hexo个人博客</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -301,7 +296,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/29/%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/29/%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E7%AC%A6%E5%8F%B7%E5%88%86%E6%9E%90%EF%BC%88O%E3%80%81o%E3%80%81%CE%A9%E3%80%81%CF%89%E3%80%81%CE%98%EF%BC%89/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -315,18 +310,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/04/29/%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/04/29/Java%E3%80%81Python%E5%AE%9E%E7%8E%B0csv%E5%92%8C%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B9%8B%E9%97%B4%E7%9A%84%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          搭建hexo个人博客(一)
+          Java、Python实现csv和二维数组之间的相互转换
         
       </div>
     </a>
   
   
-    <a href="/2020/04/28/B%E7%AB%99%E8%87%AA%E5%AD%A6%E8%AF%BE%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">B站自学课程</div>
+    <a href="/2020/04/29/%E7%9C%9F%E6%AD%A3%E8%A7%A3%E5%86%B3VSCode%E8%BF%90%E8%A1%8C%E6%97%B6%E8%87%AA%E5%8A%A8%E4%BF%9D%E5%AD%98%E9%97%AE%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">真正解决VSCode运行时自动保存问题</div>
       <i class="icon-circle-right"></i>
     </a>
   
