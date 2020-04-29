@@ -318,10 +318,10 @@ body {
 	font-size: 14px;
 	font-family: Helvetica Neue,Helvetica,STHeiTi,Arial,sans-serif;
 	line-height: 1.5;
-    color: #333;
+    color: #fff;
     min-height: 100%;
-	background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
-    url('https://c-ssl.duitang.com/uploads/item/201709/16/20170916133542_8vinr.jpeg') no-repeat 0% 0%/ cover
+	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 25, 0.5));, 
+    url('https://imagine.gsfc.nasa.gov/hst_bday/images/may-12-2019-star-forming-region-n11b.jpg') no-repeat 0% 0%/ cover
 }
 
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary {
@@ -496,19 +496,19 @@ input::-ms-clear,input::-ms-reveal {
 }
 
 input::-moz-placeholder,textarea::-moz-placeholder {
-	color: #999
+	color: #fff
 }
 
 input:-ms-input-placeholder,textarea:-ms-input-placeholder {
-	color: #999
+	color: #fff
 }
 
 input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
-	color: #999
+	color: #fff
 }
 
 .placeholder {
-	color: #999
+	color: #fff
 }
 
 table {
@@ -751,7 +751,7 @@ i {
 }
 
 body,button,input,select,textarea {
-	color: #1a1a1a;
+	color: #fff;
 	font-family: lucida grande,lucida sans unicode,lucida,helvetica,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
@@ -808,8 +808,7 @@ body {
 }
 
 .left-col {
-	background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-    url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588096761872&di=78faeda41ce4531f2929e20ed90669c3&imgtype=0&src=http://b-ssl.duitang.com/uploads/item/201612/09/20161209000936_zaXwh.jpeg')no-repeat 0% 20%/ cover;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 25, 0.5));
 	width: 300px;
 	position: fixed;
 	opacity: 1;
@@ -838,7 +837,7 @@ body {
 }
 
 .left-col #header a {
-	color: #000000
+	color: #fff
 }
 
 .left-col #header a:hover {
@@ -847,7 +846,7 @@ body {
 
 .left-col #header .header-subtitle {
 	text-align: center;
-	color: #000000;
+	color: #fff;
 	font-size: 14px;
 	line-height: 25px;
 	overflow: hidden;
