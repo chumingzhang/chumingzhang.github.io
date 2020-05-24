@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>一个操作系统的实现 | Zcm的博客</title>
+  <title>一个操作系统的实现（一） | Zcm的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在学操作系统，老师教的是清华的moocos操作系统，是根据一些基础代码填空式学习，个人不太习惯，故开始了自己探索的历程，也就有了这一系列博客（不定期更新） 一个操作系统的实现系列是按照Orange’S:一个操作系统的实现这本书一步步做的，这是案例1（所有案例基于linux系统，下面会有在虚拟机安装ubuntu教程）   在清华镜像下载ubuntu的镜像（我用的是最新版20.04） 在virtua">
+  <meta name="description" content="操作系统自学之路">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一个操作系统的实现">
-<meta property="og:url" content="http://yoursite.com/2020/05/24/%E4%B8%80%E4%B8%AA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E7%8E%B0/index.html">
+<meta property="og:title" content="一个操作系统的实现（一）">
+<meta property="og:url" content="http://yoursite.com/2020/05/28/%E4%B8%80%E4%B8%AA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E7%8E%B0(%E4%B8%80)/index.html">
 <meta property="og:site_name" content="Zcm的博客">
-<meta property="og:description" content="在学操作系统，老师教的是清华的moocos操作系统，是根据一些基础代码填空式学习，个人不太习惯，故开始了自己探索的历程，也就有了这一系列博客（不定期更新） 一个操作系统的实现系列是按照Orange’S:一个操作系统的实现这本书一步步做的，这是案例1（所有案例基于linux系统，下面会有在虚拟机安装ubuntu教程）   在清华镜像下载ubuntu的镜像（我用的是最新版20.04） 在virtua">
+<meta property="og:description" content="操作系统自学之路">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200519143519949.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200519143519887.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
-<meta property="article:published_time" content="2020-05-24T02:23:25.000Z">
-<meta property="article:modified_time" content="2020-05-24T02:23:32.644Z">
+<meta property="article:published_time" content="2020-05-28T02:23:25.000Z">
+<meta property="article:modified_time" content="2020-05-24T02:27:28.244Z">
 <meta property="article:author" content="Zcm">
 <meta property="article:tag" content="操作系统">
 <meta name="twitter:card" content="summary">
@@ -159,14 +159,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-一个操作系统的实现" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-一个操作系统的实现(一)" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      一个操作系统的实现
+      一个操作系统的实现（一）
     </h1>
   
 
@@ -180,8 +180,8 @@
 
 <!-- 添加不蒜子统计次数end -->
 
-<a href="/2020/05/24/%E4%B8%80%E4%B8%AA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E7%8E%B0/" class="archive-article-date">
-  	<time datetime="2020-05-24T02:23:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-24</time>
+<a href="/2020/05/28/%E4%B8%80%E4%B8%AA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E7%8E%B0(%E4%B8%80)/" class="archive-article-date">
+  	<time datetime="2020-05-28T02:23:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-28</time>
 </a>
         <!-- 需要添加的位置 -->
         <!-- 开始添加字数统计-->
@@ -191,7 +191,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">372字</span>
+        <span class="post-count">380字</span>
       </span>
     </span>
 
@@ -212,7 +212,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
+        <p><strong>操作系统自学之路</strong></p>
+<a id="more"></a>
+<blockquote>
 <p>在学操作系统，老师教的是清华的moocos操作系统，是根据一些基础代码填空式学习，个人不太习惯，故开始了自己探索的历程，也就有了这一系列博客（不定期更新）<br> 一个操作系统的实现系列是按照<a href="https://www.jb51.net/books/297848.html" target="_blank" rel="noopener">Orange’S:一个操作系统的实现</a>这本书一步步做的，这是<strong>案例1</strong>（所有案例基于linux系统，下面会有在虚拟机安装ubuntu教程）</p>
 </blockquote>
 <ol>
@@ -319,7 +321,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/24/%E4%B8%80%E4%B8%AA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E7%8E%B0/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/28/%E4%B8%80%E4%B8%AA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E7%8E%B0(%E4%B8%80)/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -487,15 +489,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">小游戏</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">virtualBox</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -507,19 +509,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">DevC++</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Hexo个人博客</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">vscode</a>
+                <a href="javascript:void(0)" class="js-tag color2">DevC++</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">踩坑</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">vscode</a>
               </li>
              
               <li class="article-tag-list-item">

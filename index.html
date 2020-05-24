@@ -153,14 +153,14 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-一个操作系统的实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-一个操作系统的实现(一)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/24/%E4%B8%80%E4%B8%AA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E7%8E%B0/">一个操作系统的实现</a>
+      <a class="article-title" href="/2020/05/28/%E4%B8%80%E4%B8%AA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E7%8E%B0(%E4%B8%80)/">一个操作系统的实现（一）</a>
     </h1>
   
 
@@ -169,8 +169,8 @@
 
 <!-- 添加不蒜子统计次数end -->
 
-<a href="/2020/05/24/%E4%B8%80%E4%B8%AA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E7%8E%B0/" class="archive-article-date">
-  	<time datetime="2020-05-24T02:23:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-24</time>
+<a href="/2020/05/28/%E4%B8%80%E4%B8%AA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E7%8E%B0(%E4%B8%80)/" class="archive-article-date">
+  	<time datetime="2020-05-28T02:23:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-28</time>
 </a>
         <!-- 需要添加的位置 -->
         <!-- 开始添加字数统计-->
@@ -180,7 +180,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">372字</span>
+        <span class="post-count">380字</span>
       </span>
     </span>
 
@@ -201,23 +201,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>在学操作系统，老师教的是清华的moocos操作系统，是根据一些基础代码填空式学习，个人不太习惯，故开始了自己探索的历程，也就有了这一系列博客（不定期更新）<br> 一个操作系统的实现系列是按照<a href="https://www.jb51.net/books/297848.html" target="_blank" rel="noopener">Orange’S:一个操作系统的实现</a>这本书一步步做的，这是<strong>案例1</strong>（所有案例基于linux系统，下面会有在虚拟机安装ubuntu教程）</p>
-</blockquote>
-<ol>
-<li><a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/" target="_blank" rel="noopener">在清华镜像下载ubuntu的镜像</a>（我用的是最新版20.04）</li>
-<li><a href="https://blog.csdn.net/scene_2015/article/details/83025750" target="_blank" rel="noopener">在virtualBox安装ubuntu</a>（虽然版本不同，但是操作基本一致）</li>
-<li>然后根据课本，在ubuntu虚拟机上安装NASM <code>sudo apt-get install nasm</code></li>
-<li>根据课本写好boot.asm汇编代码</li>
-</ol>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">  	org  <span class="number">07</span>c00h</span><br><span class="line">  	mov  ax, cs</span><br><span class="line"> 	mov  ds, ax</span><br><span class="line">	mov  es, ax</span><br><span class="line">	call DispStr</span><br><span class="line">	jmp  <span class="variable">$</span></span><br><span class="line">DispStr:</span><br><span class="line">	mov ax, BootMessage</span><br><span class="line">	mov bp, ax</span><br><span class="line">	mov cx, <span class="number">16</span></span><br><span class="line">	mov ax, <span class="number">01301</span>h</span><br><span class="line">	mov bx, <span class="number">000</span>ch</span><br><span class="line">	mov dl, <span class="number">0</span></span><br><span class="line">	int <span class="number">10</span>h</span><br><span class="line">	ret</span><br><span class="line">BootMessage:		db	<span class="string">"hello, os world!"</span></span><br><span class="line">times	<span class="number">510</span>-(<span class="variable">$</span>-<span class="variable">$</span><span class="variable">$</span>)	db	<span class="number">0</span></span><br><span class="line">dw	<span class="number">0</span>xaa55</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>用命令<code>nasm -o boot.img boot.asm</code>把boot.asm转为boot.img</li>
-<li>ubuntu安装增强功能把boot.img拖拽拷贝到宿主机 <a href="https://jingyan.baidu.com/article/14bd256e78e67abb6c261259.html" target="_blank" rel="noopener">虚拟机实现拖拽拷贝</a></li>
-<li>新建一个虚拟机裸机（参考步骤2新建ubuntu），把刚刚拷贝出来的boot.img作为虚拟软盘插入，启动运行即可，最终效果如下图：<br><img src="https://img-blog.csdnimg.cn/20200519143519949.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200519143519887.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
-</ol>
-<p>其余参考：<br><a href="https://www.cnblogs.com/coding-my-life/p/12813958.html" target="_blank" rel="noopener">ubuntu20.04中文路径改为英文</a><br>ubuntu调整字体大小快捷键：放大ctrl shift +   缩小ctrl -<br><a href="https://blog.csdn.net/try17875864815/article/details/104906374" target="_blank" rel="noopener">我用ubuntu虚拟机遇到的问题解决汇总</a></p>
-
+        <p><strong>操作系统自学之路</strong></p>
+        
       
 
       
@@ -241,7 +226,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/24/%E4%B8%80%E4%B8%AA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E7%8E%B0/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/05/28/%E4%B8%80%E4%B8%AA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E7%8E%B0(%E4%B8%80)/">展开全文 >></a>
         </p>
       
 
@@ -1321,15 +1306,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">小游戏</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">virtualBox</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1341,19 +1326,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">DevC++</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Hexo个人博客</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">vscode</a>
+                <a href="javascript:void(0)" class="js-tag color2">DevC++</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">踩坑</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">vscode</a>
               </li>
              
               <li class="article-tag-list-item">
