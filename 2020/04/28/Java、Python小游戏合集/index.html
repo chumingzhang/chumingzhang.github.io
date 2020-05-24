@@ -6,23 +6,32 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>virtualBox虚拟机实现ubuntu双向复制 | Zcm的博客</title>
+  <title>Java、Python小游戏合集 | Zcm的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="看了几个教程都不够全面，这里综合一下，按照以下三个步骤完成能保证实现主机到虚拟机+虚拟机到主机的双向粘贴复制">
+  <meta name="description" content="Java源码及图片素材合集Java包括：飞机大战、经典斗兽棋（有过河的那种）、五子棋、俄罗斯方块、国际象棋、吃豆人、推箱子（只有5关）、扫雷、贪吃蛇、坦克大战、2048等11个小游戏">
 <meta property="og:type" content="article">
-<meta property="og:title" content="virtualBox虚拟机实现ubuntu双向复制">
-<meta property="og:url" content="http://yoursite.com/2020/04/29/virtualBox%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%9E%E7%8E%B0ubuntu%E5%8F%8C%E5%90%91%E5%A4%8D%E5%88%B6/index.html">
+<meta property="og:title" content="Java、Python小游戏合集">
+<meta property="og:url" content="http://yoursite.com/2020/04/28/Java%E3%80%81Python%E5%B0%8F%E6%B8%B8%E6%88%8F%E5%90%88%E9%9B%86/index.html">
 <meta property="og:site_name" content="Zcm的博客">
-<meta property="og:description" content="看了几个教程都不够全面，这里综合一下，按照以下三个步骤完成能保证实现主机到虚拟机+虚拟机到主机的双向粘贴复制">
+<meta property="og:description" content="Java源码及图片素材合集Java包括：飞机大战、经典斗兽棋（有过河的那种）、五子棋、俄罗斯方块、国际象棋、吃豆人、推箱子（只有5关）、扫雷、贪吃蛇、坦克大战、2048等11个小游戏">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200318223711794.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200318223829514.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200318223930257.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
-<meta property="article:published_time" content="2020-04-29T13:43:11.011Z">
-<meta property="article:modified_time" content="2020-04-29T13:43:32.417Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200326223902280.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020032622391814.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200326223932540.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200326224005712.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200326224023254.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200326224106883.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200326224119538.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200326224137720.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020032622420184.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200326224210747.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200326224246769.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-04-28T13:04:53.000Z">
+<meta property="article:modified_time" content="2020-05-24T02:18:51.007Z">
 <meta property="article:author" content="Zcm">
+<meta property="article:tag" content="小游戏">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200318223711794.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200326223902280.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="Zcm的博客" type="application/atom+xml">
   
@@ -159,14 +168,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-virtualBox虚拟机实现ubuntu双向复制" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Java、Python小游戏合集" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      virtualBox虚拟机实现ubuntu双向复制
+      Java、Python小游戏合集
     </h1>
   
 
@@ -180,8 +189,8 @@
 
 <!-- 添加不蒜子统计次数end -->
 
-<a href="/2020/04/29/virtualBox%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%9E%E7%8E%B0ubuntu%E5%8F%8C%E5%90%91%E5%A4%8D%E5%88%B6/" class="archive-article-date">
-  	<time datetime="2020-04-29T13:43:11.011Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
+<a href="/2020/04/28/Java%E3%80%81Python%E5%B0%8F%E6%B8%B8%E6%88%8F%E5%90%88%E9%9B%86/" class="archive-article-date">
+  	<time datetime="2020-04-28T13:04:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-28</time>
 </a>
         <!-- 需要添加的位置 -->
         <!-- 开始添加字数统计-->
@@ -191,7 +200,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">185字</span>
+        <span class="post-count">190字</span>
       </span>
     </span>
 
@@ -212,10 +221,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>看了几个教程都不够全面，这里综合一下，按照以下三个步骤完成能保证实现主机到虚拟机+虚拟机到主机的双向粘贴复制</strong></p>
+        <p><strong><a href="https://github.com/chumingzhang/java" target="_blank" rel="noopener">Java源码及图片素材合集</a></strong><br><strong>Java包括：飞机大战、经典斗兽棋（有过河的那种）、五子棋、俄罗斯方块、国际象棋、吃豆人、推箱子（只有5关）、扫雷、贪吃蛇、坦克大战、2048等11个小游戏</strong></p>
 <a id="more"></a>
 
-<p><strong>1.在VirtualBox管理器选中虚拟机jian中勾→设置→常规→高级→选“双向“</strong><br><img src="https://img-blog.csdnimg.cn/20200318223711794.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>2.在VirtualBox管理器选中虚拟机jian中勾→设置→存储→勾选“使用主机输入输出(I/O)缓存”选项 和 “xx.dvi”→勾选“固态驱动器（S）”选项（按照下面两个图勾选，需要关掉正在运行的虚拟机才能勾选，否则向我一样处于不可选定状态）</strong><br><img src="https://img-blog.csdnimg.cn/20200318223829514.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200318223930257.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>3.安装增强功能-<a href="https://ywnz.com/linuxjc/2410.html" target="_blank" rel="noopener">见教程</a></strong><br>如果菜单栏被隐藏找不到”设备“按：右Ctrl+C</p>
+<p><strong><a href="https://github.com/chumingzhang/Python" target="_blank" rel="noopener">Python源码及图片素材</a></strong><br><strong>Python包括：迷宫、乒乓球、飞机大战、五子棋、俄罗斯方块、吃豆人、推箱子（只有5关）、扫雷、贪吃蛇、2048等10个小游戏</strong></p>
+<p><strong>主要规则在上面的源码网址中都有讲解，下面直接上图</strong></p>
+<p> <strong>1. 飞机大战</strong><br> <img src="https://img-blog.csdnimg.cn/20200326223902280.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br> <strong>2. 经典斗兽棋</strong><br> <img src="https://img-blog.csdnimg.cn/2020032622391814.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br> <strong>3. 五子棋</strong>（双人对战，非人机）<br> <img src="https://img-blog.csdnimg.cn/20200326223932540.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br> <strong>4. 俄罗斯方块</strong><br> <img src="https://img-blog.csdnimg.cn/20200326224005712.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br> <strong>5. 国际象棋</strong><br> <img src="https://img-blog.csdnimg.cn/20200326224023254.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br> <strong>6. 吃豆人</strong><br> <img src="https://img-blog.csdnimg.cn/20200326224106883.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br> <strong>7. 推箱子</strong><br> <img src="https://img-blog.csdnimg.cn/20200326224119538.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br> <strong>8. 扫雷</strong><br> <img src="https://img-blog.csdnimg.cn/20200326224137720.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br> <strong>9. 贪吃蛇</strong><br> <img src="https://img-blog.csdnimg.cn/2020032622420184.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br> <strong>10.坦克大战</strong><br> <img src="https://img-blog.csdnimg.cn/20200326224210747.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>11.2048</strong><br><img src="https://img-blog.csdnimg.cn/20200326224246769.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 
       
 
@@ -246,6 +257,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小游戏</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -296,7 +318,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/29/virtualBox%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%9E%E7%8E%B0ubuntu%E5%8F%8C%E5%90%91%E5%A4%8D%E5%88%B6/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/28/Java%E3%80%81Python%E5%B0%8F%E6%B8%B8%E6%88%8F%E5%90%88%E9%9B%86/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -310,18 +332,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/04/29/Java%E3%80%81Python%E5%B0%8F%E6%B8%B8%E6%88%8F%E5%90%88%E9%9B%86/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/04/28/java%E8%AF%BB%E5%8F%96json%E6%96%87%E4%BB%B6%E5%85%A8%E6%B5%81%E7%A8%8B%EF%BC%88%E5%8C%85%E5%90%AB%E4%B8%8B%E8%BD%BD%E5%8C%85%E5%92%8C%E5%AF%BC%E5%85%A5%E5%8C%85%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Java、Python小游戏合集
+          java读取json文件全流程（包含下载包和导入包）
         
       </div>
     </a>
   
   
-    <a href="/2020/04/29/java%E8%AF%BB%E5%8F%96json%E6%96%87%E4%BB%B6%E5%85%A8%E6%B5%81%E7%A8%8B%EF%BC%88%E5%8C%85%E5%90%AB%E4%B8%8B%E8%BD%BD%E5%8C%85%E5%92%8C%E5%AF%BC%E5%85%A5%E5%8C%85%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">java读取json文件全流程（包含下载包和导入包）</div>
+    <a href="/2020/04/28/virtualBox%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%9E%E7%8E%B0ubuntu%E5%8F%8C%E5%90%91%E5%A4%8D%E5%88%B6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">virtualBox虚拟机实现ubuntu双向复制</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -461,15 +483,55 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">B站自学</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">数组、csv</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小游戏</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">virtualBox</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">关系代数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">DevC++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Hexo个人博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">vscode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">踩坑</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
             
             <div class="clearfix"></div>

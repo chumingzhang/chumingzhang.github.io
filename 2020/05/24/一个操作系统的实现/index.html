@@ -6,23 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>真正解决VSCode运行时自动保存问题 | Zcm的博客</title>
+  <title>一个操作系统的实现 | Zcm的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="用过了eclipse后面用VSCode总是忘记运行时保存一下，感觉ctrl+s操作非常多余（但是在编辑word文档之类的还是要习惯性保存一下），下面介绍一下怎样真正解决VSCode运行时保存问题">
+  <meta name="description" content="在学操作系统，老师教的是清华的moocos操作系统，是根据一些基础代码填空式学习，个人不太习惯，故开始了自己探索的历程，也就有了这一系列博客（不定期更新） 一个操作系统的实现系列是按照Orange’S:一个操作系统的实现这本书一步步做的，这是案例1（所有案例基于linux系统，下面会有在虚拟机安装ubuntu教程）   在清华镜像下载ubuntu的镜像（我用的是最新版20.04） 在virtua">
 <meta property="og:type" content="article">
-<meta property="og:title" content="真正解决VSCode运行时自动保存问题">
-<meta property="og:url" content="http://yoursite.com/2020/04/29/%E7%9C%9F%E6%AD%A3%E8%A7%A3%E5%86%B3VSCode%E8%BF%90%E8%A1%8C%E6%97%B6%E8%87%AA%E5%8A%A8%E4%BF%9D%E5%AD%98%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="一个操作系统的实现">
+<meta property="og:url" content="http://yoursite.com/2020/05/24/%E4%B8%80%E4%B8%AA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E7%8E%B0/index.html">
 <meta property="og:site_name" content="Zcm的博客">
-<meta property="og:description" content="用过了eclipse后面用VSCode总是忘记运行时保存一下，感觉ctrl+s操作非常多余（但是在编辑word文档之类的还是要习惯性保存一下），下面介绍一下怎样真正解决VSCode运行时保存问题">
+<meta property="og:description" content="在学操作系统，老师教的是清华的moocos操作系统，是根据一些基础代码填空式学习，个人不太习惯，故开始了自己探索的历程，也就有了这一系列博客（不定期更新） 一个操作系统的实现系列是按照Orange’S:一个操作系统的实现这本书一步步做的，这是案例1（所有案例基于linux系统，下面会有在虚拟机安装ubuntu教程）   在清华镜像下载ubuntu的镜像（我用的是最新版20.04） 在virtua">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200402212133606.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200402212810608.png">
-<meta property="article:published_time" content="2020-04-29T02:01:36.000Z">
-<meta property="article:modified_time" content="2020-05-24T02:22:21.078Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200519143519949.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200519143519887.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-05-24T02:23:25.000Z">
+<meta property="article:modified_time" content="2020-05-24T02:23:32.644Z">
 <meta property="article:author" content="Zcm">
-<meta property="article:tag" content="vscode">
+<meta property="article:tag" content="操作系统">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200402212133606.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200519143519949.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="Zcm的博客" type="application/atom+xml">
   
@@ -159,14 +159,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-真正解决VSCode运行时自动保存问题" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-一个操作系统的实现" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      真正解决VSCode运行时自动保存问题
+      一个操作系统的实现
     </h1>
   
 
@@ -180,8 +180,8 @@
 
 <!-- 添加不蒜子统计次数end -->
 
-<a href="/2020/04/29/%E7%9C%9F%E6%AD%A3%E8%A7%A3%E5%86%B3VSCode%E8%BF%90%E8%A1%8C%E6%97%B6%E8%87%AA%E5%8A%A8%E4%BF%9D%E5%AD%98%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2020-04-29T02:01:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
+<a href="/2020/05/24/%E4%B8%80%E4%B8%AA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E7%8E%B0/" class="archive-article-date">
+  	<time datetime="2020-05-24T02:23:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-24</time>
 </a>
         <!-- 需要添加的位置 -->
         <!-- 开始添加字数统计-->
@@ -191,7 +191,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">250字</span>
+        <span class="post-count">372字</span>
       </span>
     </span>
 
@@ -212,20 +212,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>用过了eclipse后面用VSCode总是忘记运行时保存一下，感觉ctrl+s操作非常多余（但是在编辑word文档之类的还是要习惯性保存一下），下面介绍一下怎样真正解决VSCode运行时保存问题</strong></p>
-<a id="more"></a>
-
-<p><strong>文件-&gt;首选项-&gt;设置-&gt;搜索auto save</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/20200402212133606.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>四个选项分别是</p>
+        <blockquote>
+<p>在学操作系统，老师教的是清华的moocos操作系统，是根据一些基础代码填空式学习，个人不太习惯，故开始了自己探索的历程，也就有了这一系列博客（不定期更新）<br> 一个操作系统的实现系列是按照<a href="https://www.jb51.net/books/297848.html" target="_blank" rel="noopener">Orange’S:一个操作系统的实现</a>这本书一步步做的，这是<strong>案例1</strong>（所有案例基于linux系统，下面会有在虚拟机安装ubuntu教程）</p>
+</blockquote>
 <ol>
-<li>off: 关闭自动保存</li>
-<li>afterDelay: XX毫秒后自动保存，这个就是我所讲的解决方法，下面会详细介绍</li>
-<li>onFocusChange: 当焦点移出编辑框</li>
-<li>onWindowChange: 当焦点移出VSCode窗口</li>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/" target="_blank" rel="noopener">在清华镜像下载ubuntu的镜像</a>（我用的是最新版20.04）</li>
+<li><a href="https://blog.csdn.net/scene_2015/article/details/83025750" target="_blank" rel="noopener">在virtualBox安装ubuntu</a>（虽然版本不同，但是操作基本一致）</li>
+<li>然后根据课本，在ubuntu虚拟机上安装NASM <code>sudo apt-get install nasm</code></li>
+<li>根据课本写好boot.asm汇编代码</li>
 </ol>
-<p><strong>这里说的是焦点而不是鼠标，移到外面去后还要点一下感觉还是不太方便，这也是网上搜到的大多数答案。。。所以我们果断选择afterDelay，然后再如下图设置自动保存时间间隔</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/20200402212810608.png" alt="在这里插入图片描述"></p>
-<p><strong>像这样设置后每隔1s就会自动保存一下，鉴于大家的手速问题，也就变相实现了运行时保存！</strong></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">  	org  <span class="number">07</span>c00h</span><br><span class="line">  	mov  ax, cs</span><br><span class="line"> 	mov  ds, ax</span><br><span class="line">	mov  es, ax</span><br><span class="line">	call DispStr</span><br><span class="line">	jmp  <span class="variable">$</span></span><br><span class="line">DispStr:</span><br><span class="line">	mov ax, BootMessage</span><br><span class="line">	mov bp, ax</span><br><span class="line">	mov cx, <span class="number">16</span></span><br><span class="line">	mov ax, <span class="number">01301</span>h</span><br><span class="line">	mov bx, <span class="number">000</span>ch</span><br><span class="line">	mov dl, <span class="number">0</span></span><br><span class="line">	int <span class="number">10</span>h</span><br><span class="line">	ret</span><br><span class="line">BootMessage:		db	<span class="string">"hello, os world!"</span></span><br><span class="line">times	<span class="number">510</span>-(<span class="variable">$</span>-<span class="variable">$</span><span class="variable">$</span>)	db	<span class="number">0</span></span><br><span class="line">dw	<span class="number">0</span>xaa55</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>用命令<code>nasm -o boot.img boot.asm</code>把boot.asm转为boot.img</li>
+<li>ubuntu安装增强功能把boot.img拖拽拷贝到宿主机 <a href="https://jingyan.baidu.com/article/14bd256e78e67abb6c261259.html" target="_blank" rel="noopener">虚拟机实现拖拽拷贝</a></li>
+<li>新建一个虚拟机裸机（参考步骤2新建ubuntu），把刚刚拷贝出来的boot.img作为虚拟软盘插入，启动运行即可，最终效果如下图：<br><img src="https://img-blog.csdnimg.cn/20200519143519949.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200519143519887.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+</ol>
+<p>其余参考：<br><a href="https://www.cnblogs.com/coding-my-life/p/12813958.html" target="_blank" rel="noopener">ubuntu20.04中文路径改为英文</a><br>ubuntu调整字体大小快捷键：放大ctrl shift +   缩小ctrl -<br><a href="https://blog.csdn.net/try17875864815/article/details/104906374" target="_blank" rel="noopener">我用ubuntu虚拟机遇到的问题解决汇总</a></p>
 
       
 
@@ -261,7 +263,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">vscode</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">操作系统</a>
         		</li>
       		
 		</ul>
@@ -317,7 +319,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/29/%E7%9C%9F%E6%AD%A3%E8%A7%A3%E5%86%B3VSCode%E8%BF%90%E8%A1%8C%E6%97%B6%E8%87%AA%E5%8A%A8%E4%BF%9D%E5%AD%98%E9%97%AE%E9%A2%98/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/24/%E4%B8%80%E4%B8%AA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E7%8E%B0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -331,18 +333,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/04/29/%E5%9C%A8DevC++%E4%B8%AD%E4%BD%BF%E7%94%A8C++11/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          在DevC++中使用C++11
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/04/29/%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E7%AC%A6%E5%8F%B7%E5%88%86%E6%9E%90%EF%BC%88O%E3%80%81o%E3%80%81%CE%A9%E3%80%81%CF%89%E3%80%81%CE%98%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">算法时间复杂度符号分析（O、o、Ω、ω、Θ）</div>
+    <a href="/2020/05/24/%E6%9C%89%E7%94%A8+%E8%B8%A9%E5%9D%91%E6%95%99%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">有用＋踩坑教程</div>
       <i class="icon-circle-right"></i>
     </a>
   
