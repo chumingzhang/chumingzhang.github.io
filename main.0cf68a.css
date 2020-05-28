@@ -1076,7 +1076,7 @@ body {
 }
 
 .article-entry .highlight .line {
-	color: #fff;
+	color: #858585;
 	min-height: 19px
 }
 
@@ -2201,7 +2201,7 @@ pre .css~* .id,pre .id {
 	padding: 15px 20px;
 	margin-top: 10px;
 	border-left: 5px solid #657b83;
-	background: #f6f6f6
+	background: #c1c1c1
 }
 
 .article-entry blockquote p {
