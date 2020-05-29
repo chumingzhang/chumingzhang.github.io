@@ -1140,7 +1140,7 @@ pre .comment {
 }
 
 pre .class .params,pre .function .keyword,pre .keyword {
-	color: #66d9ef
+	color: #e6db74
 }
 
 pre .css .value,pre .doctype,pre .function,pre .params,pre .tag {
@@ -1160,7 +1160,7 @@ pre .string,pre .value {
 }
 
 pre .number {
-	color: #7163d7
+	color: #e6db74
 }
 
 pre .css~* .id,pre .id {
@@ -2196,12 +2196,11 @@ pre .css~* .id,pre .id {
 }
 
 .article-entry blockquote {
+	border-radius: 10px;
 	background: #ddd;
-	border-left: 5px solid #ccc;
 	padding: 15px 20px;
 	margin-top: 10px;
-	border: 1px solid #ffffff;
-	background-color: rgba(63,63,63,1);
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 .article-entry blockquote p {
