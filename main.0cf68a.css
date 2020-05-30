@@ -2188,11 +2188,13 @@ pre .css~* .id,pre .id {
 .article-entry li code,.article-entry p code {
 	padding: 1px 3px;
 	margin: 0 3px;
-	background: #ddd;
-	border: 1px solid #ccc;
+	background: #a9a2a4;
+	border: 1px solid #a9a2a4;
 	font-family: Menlo,Monaco,Andale Mono,lucida console,Courier New,monospace;
 	word-wrap: break-word;
-	font-size: 14px
+	font-size: 14px;
+	color: #c72541;
+	border-radius: 2px;
 }
 
 .article-entry blockquote {

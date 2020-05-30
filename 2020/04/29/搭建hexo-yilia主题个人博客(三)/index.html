@@ -18,7 +18,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200429205038379.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200429212220128.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70">
 <meta property="article:published_time" content="2020-04-29T13:24:10.000Z">
-<meta property="article:modified_time" content="2020-05-24T02:31:26.404Z">
+<meta property="article:modified_time" content="2020-05-30T12:43:12.146Z">
 <meta property="article:author" content="Zcm">
 <meta property="article:tag" content="Hexo个人博客">
 <meta name="twitter:card" content="summary">
@@ -191,7 +191,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1k字</span>
+        <span class="post-count">1.3k字</span>
       </span>
     </span>
 
@@ -200,7 +200,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">4分</span>
+        <span class="post-count">6分</span>
       </span>
     </span>
 </div>
@@ -216,6 +216,9 @@
 <a id="more"></a>
 
 <p><strong>效果如下图：</strong><br><img src="https://img-blog.csdnimg.cn/20200429205038379.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RyeTE3ODc1ODY0ODE1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>修改了<code>yilia\source\main.0cf68a.css</code>中的部分样式，代码太长就不贴出了，如果需要的可以私信或者留言。修改背景图片见<a href="https://blog.csdn.net/try17875864815/article/details/105833866" target="_blank" rel="noopener">我的上一篇博客</a></p>
+</blockquote>
 <p><strong>1.归档功能</strong><br>修改<code>themes/yilia/_config.yml</code>（第3-6行左右）</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">menu</span>:</span><br><span class="line">  主页: /</span><br><span class="line">  归档: /archives/index.html</span><br></pre></td></tr></table></figure>
 <p><strong>2.文章显示摘要</strong><br>文章默认全文显示，不美观也不方便查找。只要在MD博客文件的正文前插入<code>&lt;!-- more --&gt;</code>即可自动断开，只显示<code>&lt;!-- more --&gt;</code>之前内容作为摘要。同时注释掉<code>themes/yilia/_config.yml</code>中的<code>excerpt_link: more</code>（第36行左右）</p>
@@ -267,7 +270,11 @@
 <li>count：表示线条的总数量，默认：150</li>
 <li>zIndex：表示背景的z-index属性，css属性用于控制所在层的位置，默认：-1</li>
 </ul>
-<p><a href="https://blog.csdn.net/lynnbest/article/details/79845944?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1" target="_blank" rel="noopener">参考博客1——归档+摘要</a><br><a href="https://blog.csdn.net/stormdony/article/details/82559179" target="_blank" rel="noopener">参考博客2——字数、阅读时长</a><br><a href="https://blog.csdn.net/qq_36759224/article/details/85420403" target="_blank" rel="noopener">参考博客3——看板娘、背景特效</a><br><a href="https://blog.csdn.net/mudooo/article/details/94559630" target="_blank" rel="noopener">参考博客4——不蒜子访问次数</a></p>
+<p><strong>7.添加网站运行时间</strong><br>在<code>themes\yilia\layout\_partial\footer.ejs</code>文件的<code>&lt;div class=&quot;footer-left&quot;</code>最后添加如下代码：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id="timeDate"&gt;载入天数...&lt;/span&gt;&lt;span id="times"&gt;载入时分秒...&lt;/span&gt;</span><br><span class="line">&lt;<span class="selector-tag">script</span>&gt;</span><br><span class="line">	var now = new Date(); </span><br><span class="line">	<span class="selector-tag">function</span> <span class="selector-tag">createtime</span>() &#123; </span><br><span class="line">		var grt= new Date("04/28/2020 20:00:00");//此处修改你的建站时间或者网站上线时间 </span><br><span class="line">		<span class="selector-tag">now</span><span class="selector-class">.setTime</span>(<span class="selector-tag">now</span><span class="selector-class">.getTime</span>() + 250); </span><br><span class="line">		days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); </span><br><span class="line">		hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); </span><br><span class="line">		if(String(hnum).length ==1 )&#123;</span><br><span class="line">			hnum = "0" + hnum;</span><br><span class="line">		&#125; </span><br><span class="line">		minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); </span><br><span class="line">		mnum = Math.floor(minutes); if(String(mnum).length ==1 )&#123;mnum = "0" + mnum;&#125; </span><br><span class="line">		seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); </span><br><span class="line">		snum = Math.round(seconds); if(String(snum).length ==1 )&#123;snum = "0" + snum;&#125; </span><br><span class="line">		document.getElementById("timeDate").innerHTML = "本站已安全运行 " + dnum + " 天 "; </span><br><span class="line">		document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; </span><br><span class="line">	&#125; </span><br><span class="line">	<span class="selector-tag">setInterval</span>("<span class="selector-tag">createtime</span>()", 250);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>8.<a href="https://blog.csdn.net/weixin_43941364/article/details/104160976" target="_blank" rel="noopener">添加评论区</a></strong></p>
+<p><a href="https://blog.csdn.net/lynnbest/article/details/79845944?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1" target="_blank" rel="noopener">参考博客1——归档+摘要</a><br><a href="https://blog.csdn.net/stormdony/article/details/82559179" target="_blank" rel="noopener">参考博客2——字数、阅读时长</a><br><a href="https://blog.csdn.net/qq_36759224/article/details/85420403" target="_blank" rel="noopener">参考博客3——看板娘、背景特效</a><br><a href="https://blog.csdn.net/mudooo/article/details/94559630" target="_blank" rel="noopener">参考博客4——不蒜子访问次数</a><br><a href="https://blog.csdn.net/dta0502/article/details/89607895" target="_blank" rel="noopener">参考博客5——网站运行时长</a></p>
 
       
 
@@ -428,6 +435,22 @@
     <div id="footer-info">
     	<div class="footer-left">
     		&copy; 2020 Zcm
+			<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+			<script>
+			var now = new Date(); 
+			function createtime() { 
+				var grt= new Date("4/28/2020 20:00:00");//此处修改你的建站时间或者网站上线时间 
+				now.setTime(now.getTime() + 250); 
+				days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+				hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+				if(String(hnum).length ==1 ){
+					hnum = "0" + hnum;
+				} 
+				document.getElementById("timeDate").innerHTML = "本站年龄："+dnum+" 天 "; 
+				document.getElementById("times").innerHTML = hnum + " 小时 "; 
+			} 
+			setInterval("createtime()", 250);
+			</script>
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -528,7 +551,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
+                <a href="javascript:void(0)" class="js-tag color5">B站自学</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -536,7 +559,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">关系代数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小游戏</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">数组、csv</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -544,15 +583,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">B站自学</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">踩坑</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">vscode</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -564,15 +595,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">数组、csv</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小游戏</a>
+                <a href="javascript:void(0)" class="js-tag color2">vscode</a>
               </li>
             
             <div class="clearfix"></div>
